@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uditha Vithanage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./pixelcut-export.png"/>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <heaader class="header">
+      <a href="#home" class="logo">Mr. <span>Uditha</span></a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#education">Education</a>
+        <a href="#services">Services</a>
+        <a href="#websites">Websites</a>
+        <a href="#testimonials">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </heaader>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hi, I'm <span>Uditha Vithanage</span></h1>
+        <h3 class="text-animation">I'm a <span></span></h3>
+        <p>
+          Welcome to my portfolio! As a dedicated developer, I specialize in building modern and user-friendly web applications with React and Node.js. With a strong focus on simplicity and functionality, I craft intuitive interfaces and efficient backend solutions. Explore my work, from real-time chat applications to advanced pet care management platforms, and see how I bring innovative ideas to life with clean, beginner-friendly code and advanced designs.
+        </p>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/uditha-vithanage-06589631b" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/udithavithanage" target="_blank"><i class="bx bxl-github"></i></a>
+          <!-- <a href="https://www.instagram.com/uditha_vithanage" target="_blank"><i class="bx bxl-instagram-alt"></i></a> -->
+          <a href="#" target="_blank"><i class="bx bxl-twitter"></i></a>
+        </div>
+
+        <div class="btn-group">
+          <a href="mailto:udithavithanage358@gmail.com" target="_blank" class="btn">Hire Me</a>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <img src="./pixelcut-export.png" alt="" />
+      </div>
+    </section>
+
+    <section class="education" id="education">
+      <h2 class="heading">Education</h2>
+
+      <div class="timeline-items">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2017 - 2019</div>
+          <div class="timeline-content">
+            <h3>Primary Education</h3>
+            <p>
+              Rahula College Matara<br/>
+G.C.E (Ordinary Level) Examination with ICT<br/>
+<b>Nine "A" passes</b>
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2019 - 2022 (2023)</div>
+          <div class="timeline-content">
+            <h3>Secondary Education</h3>
+            <p>
+              Rahula College Matara<br/>
+G.C.E (Advance Level) Examination Physical Science Stream<br/>
+<b>“B” pass & two “C” passes</b>
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023 - 2024</div>
+          <div class="timeline-content">
+            <h3>Foundation</h3>
+            <p>
+              Informatics Institute of Technology (IIT)<br/>
+Foundation Certificate in Higher Education<br/>
+<b>Distinction pass</b>
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 - Present</div>
+          <div class="timeline-content">
+            <h3>University</h3>
+            <p>
+              Informatics Institute of Technology (IIT)<br/>
+BSc (Hons) Computer Science
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <h2 class="heading">Services</h2>
+
+      <div class="services-container">
+        <div class="service-box">
+          <div class="service-info">
+            <h4>Web Development</h4>
+            <p>
+              I provide tailored web development services, creating responsive, user-friendly websites and applications. Specializing in front-end and back-end development, I deliver secure, scalable solutions, including e-commerce and custom functionality. I collaborate closely with clients to ensure impactful digital experiences that meet their goals and drive succes
+            </p>
+          </div>
+        </div>
+
+        <div class="service-box">
+          <div class="service-info">
+            <h4>UI / UX Design</h4>
+            <p>
+              I offer UI/UX design services that focus on creating intuitive and visually appealing digital experiences. By understanding client goals and target audiences, I deliver user-friendly interfaces and optimized user flows to enhance engagement and drive business success.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="websites" id="websites">
+      <div class="websites-box">
+        <h2 class="heading"><span>MY</span> Websites</h2>
+        <div class="websites-wrapper" id="websitesList"></div>
+      </div>
+    </section>
+    
+    <script>
+      // Array of website details
+      const websites = [
+        { name: "PetLife", img: "./petlife.png", url: "https://www.pet-lifes.com/" },
+        { name: "Video Downloader", img: "./videoDownloader.png", url: "https://videodownloaderv2-9gvseiqgr-udithavithanages-projects.vercel.app/" },
+        { name: "VCU Calculators", img: "./VCUCal.png", url: "https://calculators-peach.vercel.app/" },
+        { name: "We See You", img: "./VCU.png", url: "https://udithavithanage.vercel.app/" }
+      ];
+    
+      // Generate and insert website items dynamically
+      document.getElementById("websitesList").innerHTML = websites
+        .map(website => `
+          <div class="website-item">
+            <a href="${website.url}" target="_blank">
+              <img src="${website.img}" alt="${website.name}" />
+              <h2>${website.name}</h2>
+            </a>
+          </div>
+        `)
+        .join("");
+    </script>    
+
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials-box">
+        <h2 class="heading">Skills</h2>
+    
+        <div class="websites-wrapper" id="skillsList"></div>
+      </div>
+    </section>
+    
+    <script>
+      // Array of skills with image paths
+      const skills = [
+        { name: "HTML", img: "./html.png" },
+        { name: "CSS", img: "./css.png" },
+        { name: "JavaScript", img: "./js.png" },
+        { name: "React JS", img: "./react.png" },
+        { name: "Node JS", img: "./node.png" },
+        { name: "Tailwind CSS", img: "./tailwind.png" },
+        { name: "Express JS", img: "./express.png" },
+        { name: "MongoDB", img: "./mongodb.png" },
+        { name: "Tkinter", img: "./tkinter.png" },
+        { name: "Custom Tkinter", img: "./customtkinter.png" },
+        { name: "WebSocket", img: "./webscoket.png" },
+        { name: "EmailJs", img: "./emailjs.png" }
+      ];
+    
+      // Generate and insert skill items using map()
+      document.getElementById("skillsList").innerHTML = skills
+        .map(skill => `
+          <div class="website-item">
+            <img src="${skill.img}" alt="${skill.name}" />
+            <h2>${skill.name}</h2>
+          </div>
+        `)
+        .join("");
+    </script>
+    
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+
+      <form action="">
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Enter Your Email" />
+          </div>
+          <div class="input-box">
+            <input type="number" placeholder="Phone Number" />
+            <input type="text" placeholder="Subject" />
+          </div>
+        </div>
+
+        <div class="input-group-2">
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+          ></textarea>
+          <input type="submit" value="Send Message" class="btn" />
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="social">
+        <a href="https://api.whatsapp.com/send/?phone=94713506655&text&type=phone_number&app_absent=0" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://www.facebook.com/staphane.uditha" target="_blank"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/uditha_vithanage" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
+          <a href="https://www.tiktok.com/@uditha_vithanage" target="_blank"><i class="bx bxl-tiktok"></i></a>
+      </div>
+
+      <ul class="list">
+        <li>
+          <a href="#">FAQ</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">About Me</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#">Skills</a>
+        </li>
+      </ul>
+      <p class="copyright">© <script>document.write(new Date().getFullYear());</script> Uditha Vithanage | All Right Reserved</p>
+    <script src="script.js"></script>
+  </body>
+</html>
