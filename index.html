@@ -137,69 +137,70 @@ BSc (Hons) Computer Science
     <section class="websites" id="websites">
       <div class="websites-box">
         <h2 class="heading"><span>MY</span> Websites</h2>
-        <div class="websites-wrapper" id="websitesList"></div>
+        <div class="websites-wrapper" id="websitesList">
+          <script>
+            // Array of website details
+            const websites = [
+              { name: "PetLife", img: "./petlife.png", url: "https://www.pet-lifes.com/" },
+              { name: "Video Downloader", img: "./videoDownloader.png", url: "https://videodownloaderv2-9gvseiqgr-udithavithanages-projects.vercel.app/" },
+              { name: "VCU Calculators", img: "./VCUCal.png", url: "https://calculators-peach.vercel.app/" },
+              { name: "We See You", img: "./VCU.png", url: "https://udithavithanage.vercel.app/" }
+            ];
+          
+            // Generate and insert website items dynamically
+            document.getElementById("websitesList").innerHTML = websites
+              .map(website => `
+                <div class="website-item">
+                  <a href="${website.url}" target="_blank">
+                    <img src="${website.img}" alt="${website.name}" />
+                    <h2>${website.name}</h2>
+                  </a>
+                </div>
+              `)
+              .join("");
+          </script>    
+        </div>
       </div>
     </section>
     
-    <script>
-      // Array of website details
-      const websites = [
-        { name: "PetLife", img: "./petlife.png", url: "https://www.pet-lifes.com/" },
-        { name: "Video Downloader", img: "./videoDownloader.png", url: "https://videodownloaderv2-9gvseiqgr-udithavithanages-projects.vercel.app/" },
-        { name: "VCU Calculators", img: "./VCUCal.png", url: "https://calculators-peach.vercel.app/" },
-        { name: "We See You", img: "./VCU.png", url: "https://udithavithanage.vercel.app/" }
-      ];
     
-      // Generate and insert website items dynamically
-      document.getElementById("websitesList").innerHTML = websites
-        .map(website => `
-          <div class="website-item">
-            <a href="${website.url}" target="_blank">
-              <img src="${website.img}" alt="${website.name}" />
-              <h2>${website.name}</h2>
-            </a>
-          </div>
-        `)
-        .join("");
-    </script>    
 
     <section class="testimonials" id="testimonials">
       <div class="testimonials-box">
         <h2 class="heading">Skills</h2>
     
-        <div class="websites-wrapper" id="skillsList"></div>
+        <div class="websites-wrapper" id="skillsList">
+          <script>
+            // Array of skills with image paths
+            const skills = [
+              { name: "HTML", img: "./html.png" },
+              { name: "CSS", img: "./css.png" },
+              { name: "JavaScript", img: "./js.png" },
+              { name: "React JS", img: "./react.png" },
+              { name: "Node JS", img: "./node.png" },
+              { name: "Tailwind CSS", img: "./tailwind.png" },
+              { name: "Express JS", img: "./express.png" },
+              { name: "MongoDB", img: "./mongodb.png" },
+              { name: "Tkinter", img: "./tkinter.png" },
+              { name: "Custom Tkinter", img: "./customtkinter.png" },
+              { name: "WebSocket", img: "./webscoket.png" },
+              { name: "EmailJs", img: "./emailjs.png" }
+            ];
+          
+            // Generate and insert skill items using map()
+            document.getElementById("skillsList").innerHTML = skills
+              .map(skill => `
+                <div class="website-item">
+                  <img src="${skill.img}" alt="${skill.name}" />
+                  <h2>${skill.name}</h2>
+                </div>
+              `)
+              .join("");
+          </script>
+        </div>
       </div>
     </section>
     
-    <script>
-      // Array of skills with image paths
-      const skills = [
-        { name: "HTML", img: "./html.png" },
-        { name: "CSS", img: "./css.png" },
-        { name: "JavaScript", img: "./js.png" },
-        { name: "React JS", img: "./react.png" },
-        { name: "Node JS", img: "./node.png" },
-        { name: "Tailwind CSS", img: "./tailwind.png" },
-        { name: "Express JS", img: "./express.png" },
-        { name: "MongoDB", img: "./mongodb.png" },
-        { name: "Tkinter", img: "./tkinter.png" },
-        { name: "Custom Tkinter", img: "./customtkinter.png" },
-        { name: "WebSocket", img: "./webscoket.png" },
-        { name: "EmailJs", img: "./emailjs.png" }
-      ];
-    
-      // Generate and insert skill items using map()
-      document.getElementById("skillsList").innerHTML = skills
-        .map(skill => `
-          <div class="website-item">
-            <img src="${skill.img}" alt="${skill.name}" />
-            <h2>${skill.name}</h2>
-          </div>
-        `)
-        .join("");
-    </script>
-    
-
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
 
