@@ -10,6 +10,12 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script
+      async
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script async src="script.js"></script>
   </head>
   <body>
     <heaader class="header">
@@ -204,27 +210,37 @@ BSc (Hons) Computer Science
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
 
-      <form action="">
+      <form method="POST" id="ContactForm">
         <div class="input-group">
           <div class="input-box">
-            <input type="text" placeholder="Full Name" />
-            <input type="email" placeholder="Enter Your Email" />
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              required
+            />
+            <input id="email" name="email" placeholder=" Your Email" />
           </div>
           <div class="input-box">
-            <input type="number" placeholder="Phone Number" />
-            <input type="text" placeholder="Subject" />
+            <input
+              id="title"
+              type="text"
+              name="_subject"
+              placeholder="New Submission"
+            />
           </div>
-        </div>
 
-        <div class="input-group-2">
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Your Message"
-          ></textarea>
-          <input type="submit" value="Send Message" class="btn" />
+          <div class="input-group-2">
+            <textarea
+              name=""
+              id="msg"
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
+            ></textarea>
+            <input type="submit" value="Send Message" class="btn" />
+          </div>
         </div>
       </form>
     </section>
@@ -255,6 +271,5 @@ BSc (Hons) Computer Science
         </li>
       </ul>
       <p class="copyright">© <script>document.write(new Date().getFullYear());</script> Uditha Vithanage | All Right Reserved</p>
-    <script src="script.js"></script>
   </body>
 </html>

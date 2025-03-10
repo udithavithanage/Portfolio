@@ -49,3 +49,30 @@ window.addEventListener("scroll", highlightActiveSection);
 
 // Initial call to highlight the active section when the page loads
 document.addEventListener("DOMContentLoaded", highlightActiveSection);
+
+
+emailjs.init("0p9tpQdy8w4wavvwQ");
+document.getElementById("ContactForm").addEventListener("submit", () => {
+  event.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const title = document.getElementById("title").value;
+  const message = document.getElementById("msg").value;
+
+  // Send the email
+  emailjs
+    .send("service_0ujky8t", "template_bpdxiwr", {
+      name,
+      email,
+      msg: message,
+      title,
+    })
+    .then((response) => {
+      console.log("Success!", response);
+      alert("Your message has been sent successfully!");
+    })
+    .catch((error) => {
+      console.log("Failed...", error);
+      alert("Sorry, something went wrong.");
+    });
+});
