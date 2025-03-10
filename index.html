@@ -210,37 +210,27 @@ BSc (Hons) Computer Science
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
 
-      <form method="POST" id="ContactForm">
+      <form id="ContactForm">
         <div class="input-group">
           <div class="input-box">
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              required
-            />
-            <input id="email" name="email" placeholder=" Your Email" />
+            <input id="name" type="text" placeholder="Full Name" />
+            <input id="email" type="email" placeholder="Enter Your Email" />
           </div>
           <div class="input-box">
-            <input
-              id="title"
-              type="text"
-              name="_subject"
-              placeholder="New Submission"
-            />
+            <input id="phone" type="number" placeholder="Phone Number" />
+            <input id="title" type="text" placeholder="Subject" />
           </div>
+        </div>
 
-          <div class="input-group-2">
-            <textarea
-              name=""
-              id="msg"
-              cols="30"
-              rows="10"
-              placeholder="Your Message"
-            ></textarea>
-            <input type="submit" value="Send Message" class="btn" />
-          </div>
+        <div class="input-group-2">
+          <textarea
+            name=""
+            id="msg"
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+          ></textarea>
+          <input type="submit" value="Send Message" class="btn" />
         </div>
       </form>
     </section>
