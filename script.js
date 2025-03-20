@@ -51,7 +51,7 @@ window.addEventListener("scroll", highlightActiveSection);
 document.addEventListener("DOMContentLoaded", highlightActiveSection);
 
 emailjs.init("0p9tpQdy8w4wavvwQ");
-document.getElementById("ContactForm").addEventListener("submit", () => {
+document.getElementById("ContactForm").addEventListener("submit", (event) => {
   event.preventDefault();
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
